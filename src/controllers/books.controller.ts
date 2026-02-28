@@ -32,7 +32,7 @@ export const getBooks = (
       return;
     }
 
-    const result: PaginatedResult<Book> = booksService.findAllPaginated(
+    const result = booksService.findAllPaginated(
       pageNum,
       limitNum,
       author
