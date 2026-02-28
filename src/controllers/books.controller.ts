@@ -6,7 +6,6 @@ import {
   Book,
   BooksQueryParams,
   CreateBookDto,
-  PaginatedResult,
   UpdateBookDto,
 } from "../types";
 
@@ -38,7 +37,7 @@ export const getBooks = (
       limitNum,
       author
     );
-    res.status(200).json(result);
+    res.status(200).json(result.data);
     return;
   }
 
