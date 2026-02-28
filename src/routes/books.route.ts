@@ -11,7 +11,8 @@ import { authMiddleware } from "../middleware/auth.middleware";
 
 const router = Router();
 
-router.get("/", authMiddleware, getBooks);
+// router.get("/", authMiddleware, getBooks);
+router.get("/", getBooks);
 router.get("/:id", getBookById);
 router.post("/", createBook);
 router.put("/:id", updateBook);
