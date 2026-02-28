@@ -53,7 +53,7 @@ export const getBookById = (
   const id = parseInt(req.params.id, 10);
 
   if (isNaN(id)) {
-    next(new AppError("Book ID must be a valid integer", 400));
+    next(new AppError(`Book with id ${req.params.id} not found`, 404));
     return;
   }
 
@@ -96,7 +96,7 @@ export const updateBook = (
   const id = parseInt(req.params.id, 10);
 
   if (isNaN(id)) {
-    next(new AppError("Book ID must be a valid integer", 400));
+    next(new AppError(`Book with id ${req.params.id} not found`, 404));
     return;
   }
 
